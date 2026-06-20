@@ -24,13 +24,13 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-screen items-center">
       <Image
-        src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1920&q=80"
+        src="/fondo-1.jpg"
         alt="Interior luminoso de un templo con bancas de madera"
         fill
         priority
         sizes="100vw"
         className="object-cover"
-      />
+/>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/70 to-navy/85" />
 
       <motion.div
