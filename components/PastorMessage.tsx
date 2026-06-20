@@ -17,7 +17,6 @@ export default function PastorMessage() {
 />
         </Reveal>
 
-
         <Reveal
           delay={0.15}
           className="flex flex-col justify-center bg-navy px-8 py-16 text-white md:px-14 md:py-20 lg:px-16"
@@ -59,12 +58,12 @@ export default function PastorMessage() {
           <div className="mt-8 flex items-center gap-4 border-t border-white/15 pt-6">
             <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-gold/50">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-                alt="Pastor Juan Carlos Amaya"
-                fill
-                loading="lazy"
-                sizes="48px"
-                className="object-cover"
+                  src="/pastor-message-2.png"
+                  alt="Pastor Juan Carlos Amaya"
+                  fill
+                  loading="lazy"
+                  sizes="48px"
+                  className="object-cover"
               />
             </div>
             <div>
