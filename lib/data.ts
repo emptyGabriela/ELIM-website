@@ -19,12 +19,36 @@ export const navItems: NavItem[] = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-export type Service = { day: string; time: string; name: string };
+export type Service = {
+  day: string;
+  time: string;
+  name: string;
+  description: string;
+  period: "night" | "day";
+};
 
 export const services: Service[] = [
-  { day: "Martes", time: "6:15 p.m.", name: "Culto General" },
-  { day: "Jueves", time: "6:15 p.m.", name: "Culto General" },
-  { day: "Domingo", time: "9:00 a.m.", name: "Culto General" },
+  {
+    day: "Martes",
+    time: "6:15 p.m.",
+    name: "Culto General",
+    description: "Adoración, alabanza y predicación de la Palabra",
+    period: "night",
+  },
+  {
+    day: "Jueves",
+    time: "6:15 p.m.",
+    name: "Culto General",
+    description: "Profundizando en la Palabra de Dios juntos en comunidad",
+    period: "night",
+  },
+  {
+    day: "Domingo",
+    time: "9:00 a.m.",
+    name: "Culto General",
+    description: "Culto de celebración con toda la familia de la iglesia",
+    period: "day",
+  },
 ];
 
 export type ChurchEvent = {

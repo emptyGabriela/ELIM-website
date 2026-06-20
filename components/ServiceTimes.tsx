@@ -1,4 +1,4 @@
-import { Clock } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import { services } from "@/lib/data";
@@ -7,31 +7,36 @@ export default function ServiceTimes() {
   return (
     <section id="horarios" className="bg-cream py-24">
       <div className="container-x">
-        <SectionHeading eyebrow="Únete a nosotros" title="Horarios de Cultos" />
+        <SectionHeading eyebrow="Únete a Nosotros" title="Horarios de Cultos" />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {services.map((service, i) => (
-            <Reveal key={`${service.day}-${i}`} delay={i * 0.1}>
-              <article className="group relative h-full overflow-hidden rounded-2xl bg-white p-8 shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-card">
-                <span
-                  className="absolute right-6 top-6 font-display text-5xl font-semibold text-cream transition-colors group-hover:text-gold/30"
-                  aria-hidden="true"
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-navy/5 text-navy transition-colors group-hover:bg-gold group-hover:text-navy">
-                  <Clock size={22} />
-                </div>
-                <h3 className="mt-6 font-display text-2xl font-semibold text-navy">
-                  {service.day}
-                </h3>
-                <p className="mt-2 text-3xl font-semibold text-gold">
-                  {service.time}
-                </p>
-                <p className="mt-4 text-ink/60">{service.name}</p>
-              </article>
-            </Reveal>
-          ))}
+          {services.map((service, i) => {
+            const Icon = service.period === "night" ? Moon : Sun;
+            return (
+              <Reveal key={`${service.day}-${i}`} delay={i * 0.1}>
+                <article className="flex h-full flex-col rounded-2xl bg-navy p-8 shadow-card transition-transform duration-300 hover:-translate-y-2">
+                  <Icon
+                    size={24}
+                    className="text-cream"
+                    fill={service.period === "night" ? "currentColor" : "none"}
+                    strokeWidth={service.period === "night" ? 0 : 1.5}
+                  />
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-cream/70">
+                    {service.day}
+                  </p>
+                  <p className="mt-2 font-display text-4xl font-bold text-cream">
+                    {service.time}
+                  </p>
+                  <p className="mt-3 text-base font-semibold text-cream">
+                    {service.name}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-cream/55">
+                    {service.description}
+                  </p>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
