@@ -8,12 +8,12 @@ export default function PastorMessage() {
       <div className="grid lg:grid-cols-2">
         <Reveal className="relative h-[420px] lg:h-auto">
           <Image
-            src="/pastor-message-2.png"
-            alt="Pastor Juan Carlos Amaya"
+             src="/pastor-message.jpg"
+            alt="Pastor Juan Carlos Amaya predicando"
             fill
             loading="lazy"
-            sizes="48px"
-            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+             className="object-cover"
 />
         </Reveal>
 
