@@ -17,6 +17,22 @@ export default function PastorMessage() {
 />
         </Reveal>
 
+        <Reveal className="relative h-[420px] lg:h-auto">
+  <Image
+        src="/pastor-message.jpg"
+        alt="Pastor Juan Carlos Amaya predicando"
+        fill
+        loading="lazy"
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover"
+  />
+  <div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-navy lg:via-navy/0"
+        aria-hidden="true"
+  />
+</Reveal>
+
+
         <Reveal
           delay={0.15}
           className="flex flex-col justify-center bg-navy px-8 py-16 text-white md:px-14 md:py-20 lg:px-16"
