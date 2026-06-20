@@ -35,7 +35,7 @@ export default function Navbar() {
         >
           <Link href="#inicio" className="flex items-center">
   <Image
-    src="/logo-elim.jpg"
+    src="/logo-elim.png"
     alt="Misión Cristiana Elim"
     width={180}
     height={56}
