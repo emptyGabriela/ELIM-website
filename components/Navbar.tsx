@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navItems } from "@/lib/data";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,16 @@ export default function Navbar() {
             scrolled ? "text-navy" : "text-white"
           }`}
         >
-          Misión Cristiana <span className="text-gold">Elim</span>
+          <Link href="#inicio" className="flex items-center">
+  <Image
+    src="/logo-elim.jpg"
+    alt="Misión Cristiana Elim"
+    width={180}
+    height={56}
+    priority
+    className="h-10 w-auto md:h-12"
+  />
+</Link>
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
