@@ -35,13 +35,15 @@ export default function Navbar() {
         >
           <Link href="#inicio" className="flex items-center">
   <Image
-    src="/logo-elim.png"
-    alt="Misión Cristiana Elim"
-    width={180}
-    height={56}
-    priority
-    className="h-10 w-auto md:h-12"
-  />
+  src="/logo-elim.jpg"
+  alt="Misión Cristiana Elim"
+  width={180}
+  height={56}
+  priority
+  className={`h-10 w-auto transition-all duration-300 md:h-12 ${
+    scrolled ? "" : "invert"
+  }`}
+/>
 </Link>
         </Link>
 
