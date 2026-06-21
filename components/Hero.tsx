@@ -31,7 +31,7 @@ export default function Hero() {
         sizes="100vw"
         className="object-cover"
 />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/50 to-navy/55" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/40 to-navy/45" />
 
       <motion.div
         variants={container}
