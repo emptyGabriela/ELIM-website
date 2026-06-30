@@ -13,7 +13,7 @@ const config: Config = {
           DEFAULT: "#1F2957",
           light: "#24336E",
         },
-        gold: "#D4B06A",
+        gold: "#9C8A64",
         ink: "#1A1A1A",
       },
       fontFamily: {
