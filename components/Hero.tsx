@@ -31,7 +31,10 @@ export default function Hero() {
         poster="/fondo-1.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source
+          src="https://cdn.pixabay.com/video/2021/08/17/85733-590183092_large.mp4"
+          type="video/mp4"
+        />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/40 to-navy/45" />
 
