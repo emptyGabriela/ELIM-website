@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
@@ -23,14 +22,17 @@ const item = {
 export default function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-screen items-center">
-      <Image
-        src="/fondo-1.jpg"
-        alt="Interior luminoso de un templo con bancas de madera"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-/>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/fondo-1.jpg"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/40 to-navy/45" />
 
       <motion.div
