@@ -37,10 +37,12 @@ export default function Navbar() {
   <Image
     src={scrolled ? "/logo-elim.png" : "/logo-elim-2.png"}
     alt="Misión Cristiana Elim"
-    width={180}
-    height={56}
+    width={scrolled ? 180 : 220}
+    height={scrolled ? 56 : 70}
     priority
-    className="h-10 w-auto md:h-12"
+    className={`w-auto transition-all duration-300 ${
+      scrolled ? "h-10 md:h-12" : "h-14 md:h-16"
+    }`}
   />
 </Link>
         </Link>
