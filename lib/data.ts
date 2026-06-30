@@ -65,7 +65,7 @@ export const events: ChurchEvent[] = [
     description:
       "Un tiempo sagrado de comunión donde recordamos juntos el sacrificio de Cristo en un ambiente de adoración y reflexión.",
     date: "5 de julio",
-    image: "/cena-del-senor.jpg",
+    image: "/cena-del-senor-1.jpg",
     alt: "Cena del Señor en la congregación",
   },
   {
@@ -129,7 +129,7 @@ export const events: ChurchEvent[] = [
     description:
       "Una noche de oración prolongada y adoración para cerrar el mes buscando la presencia de Dios juntas.",
     date: "31 de julio",
-    image: "/vigilia-de-mujeres.jpg",
+    image: "/vigilia-de-mujeres-1.jpg",
     alt: "Vigilia de oración de mujeres",
   },
 ];
