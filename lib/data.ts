@@ -228,13 +228,38 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const contact = {
-  address: "Av. Principal 456",
+  address:
+    "Bosque #2, a 300 metros de la parada de buses a Santa Rosa, Ciudad Arce, La Libertad Centro",
   phone: "+503 2245 7890",
   email: "info@iglesiaelim.org",
   socials: [
-    { label: "Facebook", href: "https://facebook.com" },
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "YouTube", href: "https://youtube.com" },
-    { label: "WhatsApp", href: "https://wa.me/50322457890" },
+    {
+      label: "Elim Ciudad Arce",
+      href: "https://www.facebook.com/share/1AfJq1F4bk/",
+    },
+    {
+      label: "Mujeres de Cambio",
+      href: "https://www.facebook.com/share/1JLzJrVRKf/",
+    },
+    {
+      label: "Juventud JECA",
+      href: "https://www.facebook.com/share/18nBoXS9rG/",
+    },
+    {
+      label: "JECA KIDS",
+      href: "https://www.facebook.com/share/1CGEPEsbJ9/",
+    },
+    {
+      label: "MIEPAN",
+      href: "https://www.facebook.com/share/1E9wo4zY5e/",
+    },
+    {
+      label: "Instagram JECA",
+      href: "https://www.instagram.com/elimjecaoficial/",
+    },
+    {
+      label: "YouTube Elim",
+      href: "https://www.youtube.com/channel/UCX9E6LlDrRlFKUZCbGfWYAg",
+    },
   ],
 };

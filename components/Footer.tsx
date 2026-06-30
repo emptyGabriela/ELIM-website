@@ -18,7 +18,7 @@ export default function Footer() {
               Una comunidad de fe donde encontrarás amor, esperanza y un lugar
               para crecer junto a tu familia.
             </p>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {contact.socials.map((social) => (
                 <Link
                   key={social.label}
