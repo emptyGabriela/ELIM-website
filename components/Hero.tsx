@@ -32,7 +32,7 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source
-          src="https://cdn.pixabay.com/video/2021/08/17/85733-590183092_large.mp4"
+          src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
           type="video/mp4"
         />
       </video>
