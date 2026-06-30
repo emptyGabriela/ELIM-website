@@ -21,11 +21,6 @@ export const metadata: Metadata = {
     "El Salvador",
   ],
   authors: [{ name: "Misión Cristiana Elim" }],
-  icons: {
-    icon: "/logo-solo-elim.png",
-    shortcut: "/logo-solo-elim.png",
-    apple: "/logo-solo-elim.png",
-  },
   openGraph: {
     type: "website",
     locale: "es_SV",
@@ -46,3 +41,15 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
+    </html>
+  );
+}
