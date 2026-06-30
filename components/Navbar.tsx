@@ -64,9 +64,9 @@ export default function Navbar() {
 
         <Link
           href="#contacto"
-          className="hidden rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy shadow-soft transition-all hover:-translate-y-0.5 hover:bg-[#c79f56] lg:inline-flex">
+          className="hidden rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy shadow-soft transition-all hover:-translate-y-0.5 hover:bg-[#867658] lg:inline-flex">
           Planifica tu visita
-          
+
         </Link>
 
         <button
