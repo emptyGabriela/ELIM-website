@@ -65,84 +65,74 @@ export const events: ChurchEvent[] = [
     description:
       "Un tiempo sagrado de comunión donde recordamos juntos el sacrificio de Cristo en un ambiente de adoración y reflexión.",
     date: "5 de julio",
-    image:
-      "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=900&q=80",
-    alt: "Interior de un templo con luz cálida durante un servicio",
+    image: "/cena-del-señor.jpg",
+    alt: "Cena del Señor en la congregación",
   },
   {
     title: "Reunión de JECA",
     description:
       "Un encuentro especial para nuestros jóvenes de JECA, un espacio de comunión, enseñanza y crecimiento en la fe.",
     date: "5 de julio",
-    image:
-      "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=900&q=80",
-    alt: "Grupo de jóvenes conversando y sonriendo juntos",
+    image: "/jeca-1.jpg",
+    alt: "Jóvenes de JECA reunidos en comunión",
   },
   {
     title: "Evento de Hombres",
     description:
       "Una noche pensada para fortalecer a los hombres de la congregación con enseñanza, oración y compañerismo.",
     date: "12 de julio",
-    image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80",
-    alt: "Grupo de hombres reunidos conversando",
+    image: "/evento-de-hombres-1.jpg",
+    alt: "Hombres reunidos en el evento de hombres",
   },
   {
     title: "Reunión de Líderes",
     description:
       "Un espacio de capacitación, visión y oración para quienes sirven liderando los distintos ministerios de la iglesia.",
     date: "13 de julio",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80",
-    alt: "Grupo de personas reunidas en una sala de planificación",
+    image: "/reunion-de-lideres-1.jpg",
+    alt: "Líderes reunidos en capacitación y oración",
   },
   {
     title: "Evento Evangelístico de Mujeres",
     description:
       "Una jornada de alcance pensada para llevar un mensaje de esperanza a mujeres de nuestra comunidad.",
     date: "16 de julio",
-    image:
-      "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=80",
-    alt: "Grupo de mujeres conversando al aire libre",
+    image: "/evento-evangelistico-de-mujeres.jpg",
+    alt: "Mujeres en el evento evangelístico",
   },
   {
     title: "Labor Social con MIEPAN",
     description:
       "Una semana de servicio a la comunidad junto al ministerio MIEPAN, con el Pastor Mathew Cross, llevando ayuda y esperanza a quienes más lo necesitan.",
     date: "17 al 23 de julio",
-    image:
-      "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80",
-    alt: "Voluntarios entregando ayuda comunitaria",
+    image: "/miepan-1.jpg",
+    alt: "Labor social con el ministerio MIEPAN",
   },
   {
     title: "Ayuno de Mujeres",
     description:
       "Un tiempo dedicado de búsqueda espiritual, oración y consagración para las mujeres de la congregación.",
     date: "25 de julio",
-    image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=80",
-    alt: "Mujeres orando juntas en un ambiente de recogimiento",
+    image: "/ayuno-de-mujeres-1.jpg",
+    alt: "Mujeres orando juntas durante el ayuno",
   },
   {
     title: "Reunión de Líderes",
     description:
       "Un nuevo encuentro de formación y oración para fortalecer el liderazgo de nuestros ministerios.",
     date: "27 de julio",
-    image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
-    alt: "Grupo de líderes en una reunión de trabajo",
+    image: "/reunion-de-lideres-2.jpg",
+    alt: "Segunda reunión de líderes del mes",
   },
   {
     title: "Vigilia de Mujeres",
     description:
       "Una noche de oración prolongada y adoración para cerrar el mes buscando la presencia de Dios juntas.",
     date: "31 de julio",
-    image:
-      "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=80",
-    alt: "Velas encendidas en un ambiente de oración nocturna",
+    image: "/vigilia-de-mujeres.jpg",
+    alt: "Vigilia de oración de mujeres",
   },
 ];
-
 export type Station = { name: string; tag: string };
 
 export const stations: Station[] = [
