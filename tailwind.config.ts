@@ -10,8 +10,8 @@ const config: Config = {
       colors: {
         cream: "#F3EEDF",
         navy: {
-          DEFAULT: "#1F2957",
-          light: "#24336E",
+          DEFAULT: "#172B43",
+          light: "#1C355A",
         },
         gold: "#9C8A64",
         ink: "#1A1A1A",
