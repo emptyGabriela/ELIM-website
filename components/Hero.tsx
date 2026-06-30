@@ -21,14 +21,13 @@ const item = {
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative flex min-h-screen items-center">
+    <section id="inicio" className="relative flex min-h-screen items-center bg-navy">
       <video
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        poster="/fondo-1.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source
