@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     "El Salvador",
   ],
   authors: [{ name: "Misión Cristiana Elim" }],
+  icons: {
+    icon: "/logo-solo-elim.png",
+    shortcut: "/logo-solo-elim.png",
+    apple: "/logo-solo-elim.png",
+  },
   openGraph: {
     type: "website",
     locale: "es_SV",
