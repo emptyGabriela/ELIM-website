@@ -65,7 +65,7 @@ export const events: ChurchEvent[] = [
     description:
       "Un tiempo sagrado de comunión donde recordamos juntos el sacrificio de Cristo en un ambiente de adoración y reflexión.",
     date: "5 de julio",
-    image: "/cena-del-señor.jpg",
+    image: "/cena-del-senor.jpg",
     alt: "Cena del Señor en la congregación",
   },
   {
