@@ -142,6 +142,7 @@ export const events: ChurchEvent[] = [
     alt: "Velas encendidas en un ambiente de oración nocturna",
   },
 ];
+
 export type Station = { name: string; tag: string };
 
 export const stations: Station[] = [

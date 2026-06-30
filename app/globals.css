@@ -52,3 +52,12 @@ body {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Oculta la barra de scroll en los carruseles (mantiene el desplazamiento) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
