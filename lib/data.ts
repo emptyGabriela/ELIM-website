@@ -133,15 +133,16 @@ export const events: ChurchEvent[] = [
     alt: "Vigilia de oración de mujeres",
   },
 ];
-export type Station = { name: string; tag: string };
+
+export type Station = { name: string; tag: string; href: string };
 
 export const stations: Station[] = [
-  { name: "540 AM", tag: "Radio" },
-  { name: "100.5 FM", tag: "Radio" },
-  { name: "Elim TV", tag: "Televisión" },
-  { name: "ID FM", tag: "Radio" },
-  { name: "Restauración", tag: "Podcast" },
-  { name: "Gospel TV", tag: "Televisión" },
+  { name: "540 AM", tag: "Radio", href: "https://www.elim.org.sv/540am/" },
+  { name: "100.5 FM", tag: "Radio", href: "https://www.elim.org.sv/restauracion/" },
+  { name: "Elim TV", tag: "Televisión", href: "https://www.elim.org.sv/elimtv/" },
+  { name: "ID FM", tag: "Radio", href: "https://www.elim.org.sv/idradio/" },
+  { name: "Restauración", tag: "Podcast", href: "https://www.elim.org.sv/radio-1450-am/" },
+  { name: "Gospel TV", tag: "Televisión", href: "https://www.elim.org.sv/gospel/" },
 ];
 
 export type Ministry = {
