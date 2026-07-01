@@ -8,7 +8,7 @@ export default function PastorMessage() {
       <div className="grid lg:grid-cols-2">
         <Reveal className="relative h-[420px] lg:h-auto">
           <Image
-             src="/pastor-message.jpg"
+             src="/pastor-message-3.jpg"
             alt="Pastor Juan Carlos Amaya predicando"
             fill
             loading="lazy"
@@ -63,7 +63,7 @@ export default function PastorMessage() {
           <div className="mt-8 flex items-center gap-4 border-t border-white/15 pt-6">
             <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-gold/50">
               <Image
-                  src="/pastor-message-3.png"
+                  src="/pastor-message-2.png"
                   alt="Pastor Juan Carlos Amaya"
                   fill
                   loading="lazy"
