@@ -7,7 +7,7 @@ export default function RadioTV() {
   return (
     <section id="radio-tv" className="relative overflow-hidden py-24">
       <Image
-        src="/fondo-comunicaciones-1.jpeg"
+        src="/fondo-comunicaciones-2.jpg"
         alt=""
         fill
         loading="lazy"
