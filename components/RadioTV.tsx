@@ -52,18 +52,7 @@ export default function RadioTV() {
             </div>
           </div>
 
-          <Reveal delay={0.2}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
-              <Image
-                src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&w=900&q=80"
-                alt="Estudio de grabación con micrófono y equipo de audio"
-                fill
-                loading="lazy"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-          </Reveal>
+        
         </div>
       </div>
     </section>
