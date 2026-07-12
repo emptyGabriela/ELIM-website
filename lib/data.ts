@@ -158,7 +158,7 @@ export const ministries: Ministry[] = [
     name: "JECA Kids",
     description: "Enseñanza bíblica creativa para los más pequeños.",
     icon: Baby,
-    image: "/logo_KIDS_ORIGINAL.png",
+    image: "/logoKIDS_ORIGINAL.png",
     href: "/jeca-kids",
   },
   {
