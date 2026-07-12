@@ -118,13 +118,13 @@ export default function JecaKidsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/70 to-navy/90" />
 
           <div className="container-x relative z-10 flex flex-col items-center pt-20 text-center text-white">
-            <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm">
+            <div className="flex items-center justify-center rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
               <Image
                 src="/logoKIDS_ORIGINAL.png"
                 alt="Logo de JECA Kids"
-                width={64}
-                height={64}
-                className="h-full w-full object-cover"
+                width={200}
+                height={200}
+                className="h-auto w-auto max-h-40 object-contain"
               />
             </div>
             <span className="eyebrow mt-6 text-gold">
