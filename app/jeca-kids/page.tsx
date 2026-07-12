@@ -111,7 +111,7 @@ export default function JecaKidsPage() {
         {/* Hero */}
         <section className="relative flex min-h-[85vh] items-center py-24 sm:min-h-[70vh] sm:py-0">
           <Image
-            src="/kids_1.jpg"
+            src="/kids.jpg"
             alt="Niños sonriendo en una actividad del ministerio infantil"
             fill
             priority
@@ -163,22 +163,15 @@ export default function JecaKidsPage() {
               Un espacio donde los niños aprenden, juegan y descubren el amor
               de Dios de una manera divertida y segura.
             </p>
-            <div className="mt-10 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:justify-center">
-              <Button
-                href="/#contacto"
-                variant="primary"
-                className="w-full sm:w-auto"
-              >
-                Inscribe a tu hijo
-              </Button>
+            <div className="mt-10 flex w-full justify-center px-4 sm:w-auto sm:px-0">
               {facebook && (
                 <a
                   href={facebook.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/70 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-navy sm:w-auto"
+                  className="inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full border border-white/70 px-6 py-3.5 text-center text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-navy sm:w-auto sm:max-w-none sm:px-7"
                 >
-                  <Facebook size={18} />
+                  <Facebook size={18} className="shrink-0" />
                   Síguenos en Facebook
                 </a>
               )}
