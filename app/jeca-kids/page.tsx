@@ -58,28 +58,16 @@ const highlights = [
 // Imágenes de referencia — sustituir por fotos reales del ministerio cuando estén disponibles.
 const gallery = [
   {
-    src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80",
-    alt: "Niños participando en una actividad grupal",
+    src: "/kids.jpg",
+    alt: "Niños participando en una actividad de JECA Kids",
   },
   {
-    src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    alt: "Niños haciendo manualidades en el salón",
+    src: "/kids_1.jpg",
+    alt: "Niños en una actividad del ministerio infantil",
   },
   {
-    src: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=800&q=80",
-    alt: "Grupo de niños cantando y alabando",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1541692641319-981cc79ee10a?auto=format&fit=crop&w=800&q=80",
-    alt: "Maestra enseñando la Biblia a los niños",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1560785496-3c9d27877182?auto=format&fit=crop&w=800&q=80",
-    alt: "Niños jugando juntos en el patio",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1607453998774-d533f65dac99?auto=format&fit=crop&w=800&q=80",
-    alt: "Familia sonriendo en la iglesia",
+    src: "/kids_2.jpg",
+    alt: "Niños disfrutando en JECA Kids",
   },
 ];
 
@@ -169,9 +157,9 @@ export default function JecaKidsPage() {
                   href={facebook.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full border border-white/70 px-6 py-3.5 text-center text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-navy sm:w-auto sm:max-w-none sm:px-7"
+                  className="inline-flex w-full max-w-[220px] items-center justify-center gap-1.5 rounded-full border border-white/70 px-5 py-2.5 text-center text-xs font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-navy sm:w-auto sm:max-w-none"
                 >
-                  <Facebook size={18} className="shrink-0" />
+                  <Facebook size={15} className="shrink-0" />
                   Síguenos en Facebook
                 </a>
               )}
