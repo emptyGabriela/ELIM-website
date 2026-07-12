@@ -20,10 +20,13 @@ import Button from "@/components/ui/Button";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "",
+  title: "JECA Kids",
   description:
     "Conoce JECA Kids, el ministerio infantil de Misión Cristiana Elim: enseñanza bíblica, música, juegos y un espacio seguro para que los niños crezcan en la fe.",
 };
+
+// Paleta tomada del logo de JECA Kids (morado, rojo, amarillo, azul, verde).
+const kidsColors = ["#7C2D8E", "#E8291C", "#F5B722", "#3E86A0", "#7CB342"];
 
 const highlights = [
   {
@@ -93,7 +96,7 @@ export default function JecaKidsPage() {
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-20">
-        <div className="container-x flex h-20 items-center justify-between">
+        <div className="container-x flex h-16 items-center justify-between sm:h-20">
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm font-medium text-white/90 transition-colors hover:text-gold"
@@ -106,7 +109,7 @@ export default function JecaKidsPage() {
 
       <main>
         {/* Hero */}
-        <section className="relative flex min-h-[70vh] items-center">
+        <section className="relative flex min-h-[85vh] items-center py-24 sm:min-h-[70vh] sm:py-0">
           <Image
             src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1920&q=80"
             alt="Niños sonriendo en una actividad del ministerio infantil"
@@ -117,28 +120,46 @@ export default function JecaKidsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/70 to-navy/90" />
 
-          <div className="container-x relative z-10 flex flex-col items-center pt-20 text-center text-white">
-            <div className="flex items-center justify-center rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
-              <Image
-                src="/logoKIDS_ORIGINAL.png"
-                alt="Logo de JECA Kids"
-                width={200}
-                height={200}
-                className="h-auto w-auto max-h-40 object-contain"
+          {/* Franja de colores del logo */}
+          <div className="absolute inset-x-0 top-0 z-10 flex h-1.5 sm:h-2">
+            {kidsColors.map((color) => (
+              <span
+                key={color}
+                className="h-full flex-1"
+                style={{ backgroundColor: color }}
               />
+            ))}
+          </div>
+
+          <div className="container-x relative z-10 flex flex-col items-center px-6 pt-8 text-center text-white sm:pt-20">
+            <div className="w-full max-w-[220px] rounded-2xl bg-white/10 p-3 backdrop-blur-sm sm:max-w-xs sm:p-4">
+              <div className="relative aspect-[2284/1084] w-full">
+                <Image
+                  src="/logoKIDS_ORIGINAL.png"
+                  alt="Logo de JECA Kids"
+                  fill
+                  sizes="(max-width: 640px) 220px, 320px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
             <span className="eyebrow mt-6 text-gold">
               Ministerio Infantil
             </span>
-            <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
               JECA Kids
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-cream/90">
+            <p className="mt-6 max-w-xl px-2 text-base text-cream/90 sm:text-lg">
               Un espacio donde los niños aprenden, juegan y descubren el amor
               de Dios de una manera divertida y segura.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button href="/#contacto" variant="primary">
+            <div className="mt-10 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:justify-center">
+              <Button
+                href="/#contacto"
+                variant="primary"
+                className="w-full sm:w-auto"
+              >
                 Inscribe a tu hijo
               </Button>
               {facebook && (
@@ -146,7 +167,7 @@ export default function JecaKidsPage() {
                   href={facebook.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-navy"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/70 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-navy sm:w-auto"
                 >
                   <Facebook size={18} />
                   Síguenos en Facebook
@@ -157,7 +178,7 @@ export default function JecaKidsPage() {
         </section>
 
         {/* Información */}
-        <section className="bg-cream py-24">
+        <section className="bg-cream py-16 sm:py-24">
           <div className="container-x">
             <SectionHeading
               eyebrow="Sobre nosotros"
@@ -165,13 +186,17 @@ export default function JecaKidsPage() {
               description="En JECA Kids acompañamos a los niños en cada etapa de su crecimiento espiritual, con clases dinámicas los martes, jueves y domingos durante el horario de cultos."
             />
 
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
               {highlights.map((item, i) => {
                 const Icon = item.icon;
+                const color = kidsColors[i % kidsColors.length];
                 return (
                   <Reveal key={item.title} delay={i * 0.08}>
-                    <article className="flex h-full flex-col items-start gap-4 rounded-2xl border border-navy/5 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-card">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy text-gold">
+                    <article className="flex h-full flex-col items-start gap-4 rounded-2xl border border-navy/5 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:p-7">
+                      <div
+                        className="flex h-12 w-12 items-center justify-center rounded-xl text-white"
+                        style={{ backgroundColor: color }}
+                      >
                         <Icon size={22} />
                       </div>
                       <h3 className="font-display text-lg font-semibold text-navy">
@@ -189,7 +214,7 @@ export default function JecaKidsPage() {
         </section>
 
         {/* Galería de fotos */}
-        <section className="bg-[#ece5d2] py-24">
+        <section className="bg-[#ece5d2] py-16 sm:py-24">
           <div className="container-x">
             <SectionHeading
               eyebrow="Momentos JECA Kids"
@@ -197,27 +222,36 @@ export default function JecaKidsPage() {
               description="Un vistazo a lo que vivimos cada semana junto a los niños."
             />
 
-            <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3">
-              {gallery.map((photo, i) => (
-                <Reveal key={photo.src} delay={i * 0.06}>
-                  <div className="relative aspect-square overflow-hidden rounded-2xl shadow-soft">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      loading="lazy"
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                </Reveal>
-              ))}
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 md:grid-cols-3">
+              {gallery.map((photo, i) => {
+                const color = kidsColors[i % kidsColors.length];
+                return (
+                  <Reveal key={photo.src} delay={i * 0.06}>
+                    <div className="overflow-hidden rounded-2xl shadow-soft">
+                      <div className="relative aspect-square overflow-hidden">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          loading="lazy"
+                          sizes="(max-width: 768px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                      </div>
+                      <span
+                        className="block h-1.5 w-full"
+                        style={{ backgroundColor: color }}
+                      />
+                    </div>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Videos */}
-        <section className="bg-navy py-24">
+        <section className="bg-navy py-16 sm:py-24">
           <div className="container-x">
             <SectionHeading
               eyebrow="Míralos en acción"
@@ -225,64 +259,76 @@ export default function JecaKidsPage() {
               light
             />
 
-            <div className="mt-14 grid gap-8 md:grid-cols-2">
-              {videos.map((video, i) => (
-                <Reveal key={video.title} delay={i * 0.1}>
-                  <div className="overflow-hidden rounded-2xl shadow-card">
-                    <div className="relative aspect-video w-full">
-                      {video.youtubeId ? (
-                        <iframe
-                          className="absolute inset-0 h-full w-full"
-                          src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                          title={video.title}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
-                      ) : (
-                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-navy-light text-cream/60">
-                          <PlayCircle size={32} />
-                          <span className="text-sm">
-                            Video próximamente
-                          </span>
-                        </div>
-                      )}
+            <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 md:grid-cols-2">
+              {videos.map((video, i) => {
+                const color = kidsColors[i % kidsColors.length];
+                return (
+                  <Reveal key={video.title} delay={i * 0.1}>
+                    <div className="overflow-hidden rounded-2xl shadow-card">
+                      <div className="relative aspect-video w-full">
+                        {video.youtubeId ? (
+                          <iframe
+                            className="absolute inset-0 h-full w-full"
+                            src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                            title={video.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-navy-light text-cream/60">
+                            <PlayCircle size={32} />
+                            <span className="text-sm">Video próximamente</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3 bg-navy-light px-5 py-4">
+                        <PlayCircle size={20} style={{ color }} />
+                        <span className="font-medium text-white">
+                          {video.title}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3 bg-navy-light px-5 py-4">
-                      <PlayCircle size={20} className="text-gold" />
-                      <span className="font-medium text-white">
-                        {video.title}
-                      </span>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* CTA / Contacto */}
-        <section className="bg-cream py-24">
+        <section className="bg-cream py-16 sm:py-24">
           <div className="container-x">
             <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] bg-navy px-8 py-16 text-center md:px-16 md:py-20">
+              <div className="relative overflow-hidden rounded-[2rem] bg-navy px-6 py-14 text-center sm:px-16 sm:py-20">
                 <div
-                  className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-gold/15 blur-2xl"
+                  className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full blur-2xl"
+                  style={{ backgroundColor: `${kidsColors[3]}33` }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="pointer-events-none absolute -bottom-20 -left-10 h-64 w-64 rounded-full blur-2xl"
+                  style={{ backgroundColor: `${kidsColors[0]}33` }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="pointer-events-none absolute right-1/3 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full blur-2xl"
+                  style={{ backgroundColor: `${kidsColors[2]}26` }}
                   aria-hidden="true"
                 />
                 <div className="relative flex flex-col items-center">
                   <Baby size={36} className="text-gold" />
                   <span className="eyebrow mt-4">Únete a JECA Kids</span>
-                  <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
+                  <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-semibold leading-tight text-white sm:text-5xl">
                     Tu hijo tiene un lugar aquí
                   </h2>
-                  <p className="mx-auto mt-6 max-w-xl text-lg text-cream/80">
+                  <p className="mx-auto mt-6 max-w-xl text-base text-cream/80 sm:text-lg">
                     Escríbenos y con gusto te contamos cómo inscribir a tu
                     hijo en el próximo servicio.
                   </p>
 
-                  <div className="mt-10 flex flex-col items-center gap-4 text-cream/85 sm:flex-row sm:gap-8">
-                    <div className="flex items-center gap-2">
-                      <MapPin size={18} className="text-gold" />
+                  <div className="mt-10 flex flex-col items-center gap-4 text-cream/85 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-8">
+                    <div className="flex items-center gap-2 text-center sm:text-left">
+                      <MapPin size={18} className="shrink-0 text-gold" />
                       <span>{contact.address}</span>
                     </div>
                     <a
@@ -301,8 +347,12 @@ export default function JecaKidsPage() {
                     </a>
                   </div>
 
-                  <div className="mt-10">
-                    <Button href="/#contacto" variant="primary">
+                  <div className="mt-10 w-full sm:w-auto">
+                    <Button
+                      href="/#contacto"
+                      variant="primary"
+                      className="w-full sm:w-auto"
+                    >
                       Planifica tu visita
                     </Button>
                   </div>
