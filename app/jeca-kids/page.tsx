@@ -111,7 +111,7 @@ export default function JecaKidsPage() {
         {/* Hero */}
         <section className="relative flex min-h-[85vh] items-center py-24 sm:min-h-[70vh] sm:py-0">
           <Image
-            src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1920&q=80"
+            src="/kids.jpg"
             alt="Niños sonriendo en una actividad del ministerio infantil"
             fill
             priority
