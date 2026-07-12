@@ -120,7 +120,7 @@ export default function JecaKidsPage() {
           <div className="container-x relative z-10 flex flex-col items-center pt-20 text-center text-white">
             <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl bg-white/10 backdrop-blur-sm">
               <Image
-                src="/logo_KIDS_ORIGINAL.png"
+                src="/logoKIDS_ORIGINAL.png"
                 alt="Logo de JECA Kids"
                 width={64}
                 height={64}
