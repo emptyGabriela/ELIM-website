@@ -20,7 +20,7 @@ import Button from "@/components/ui/Button";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "JECA Kids",
+  title: "",
   description:
     "Conoce JECA Kids, el ministerio infantil de Misión Cristiana Elim: enseñanza bíblica, música, juegos y un espacio seguro para que los niños crezcan en la fe.",
 };
