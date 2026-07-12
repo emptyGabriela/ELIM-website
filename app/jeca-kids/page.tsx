@@ -150,6 +150,15 @@ export default function JecaKidsPage() {
             <h1 className="mt-4 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
               JECA Kids
             </h1>
+            <div className="mt-5 flex gap-1.5" aria-hidden="true">
+              {kidsColors.map((color) => (
+                <span
+                  key={color}
+                  className="h-1.5 w-8 rounded-full sm:w-10"
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </div>
             <p className="mt-6 max-w-xl px-2 text-base text-cream/90 sm:text-lg">
               Un espacio donde los niños aprenden, juegan y descubren el amor
               de Dios de una manera divertida y segura.
@@ -180,6 +189,15 @@ export default function JecaKidsPage() {
         {/* Información */}
         <section className="bg-cream py-16 sm:py-24">
           <div className="container-x">
+            <div className="flex justify-center gap-1.5" aria-hidden="true">
+              {kidsColors.map((color) => (
+                <span
+                  key={color}
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </div>
             <SectionHeading
               eyebrow="Sobre nosotros"
               title="Fe, diversión y comunidad para los más pequeños"
@@ -192,7 +210,10 @@ export default function JecaKidsPage() {
                 const color = kidsColors[i % kidsColors.length];
                 return (
                   <Reveal key={item.title} delay={i * 0.08}>
-                    <article className="flex h-full flex-col items-start gap-4 rounded-2xl border border-navy/5 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:p-7">
+                    <article
+                      className="flex h-full flex-col items-start gap-4 rounded-2xl border border-navy/5 border-t-4 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:p-7"
+                      style={{ borderTopColor: color }}
+                    >
                       <div
                         className="flex h-12 w-12 items-center justify-center rounded-xl text-white"
                         style={{ backgroundColor: color }}
@@ -216,6 +237,15 @@ export default function JecaKidsPage() {
         {/* Galería de fotos */}
         <section className="bg-[#ece5d2] py-16 sm:py-24">
           <div className="container-x">
+            <div className="flex justify-center gap-1.5" aria-hidden="true">
+              {kidsColors.map((color) => (
+                <span
+                  key={color}
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </div>
             <SectionHeading
               eyebrow="Momentos JECA Kids"
               title="Fotos del ministerio"
@@ -227,7 +257,10 @@ export default function JecaKidsPage() {
                 const color = kidsColors[i % kidsColors.length];
                 return (
                   <Reveal key={photo.src} delay={i * 0.06}>
-                    <div className="overflow-hidden rounded-2xl shadow-soft">
+                    <div
+                      className="overflow-hidden rounded-2xl border-2 shadow-soft transition-colors duration-300"
+                      style={{ borderColor: `${color}40` }}
+                    >
                       <div className="relative aspect-square overflow-hidden">
                         <Image
                           src={photo.src}
@@ -253,6 +286,15 @@ export default function JecaKidsPage() {
         {/* Videos */}
         <section className="bg-navy py-16 sm:py-24">
           <div className="container-x">
+            <div className="flex justify-center gap-1.5" aria-hidden="true">
+              {kidsColors.map((color) => (
+                <span
+                  key={color}
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </div>
             <SectionHeading
               eyebrow="Míralos en acción"
               title="Videos del ministerio"
@@ -264,7 +306,10 @@ export default function JecaKidsPage() {
                 const color = kidsColors[i % kidsColors.length];
                 return (
                   <Reveal key={video.title} delay={i * 0.1}>
-                    <div className="overflow-hidden rounded-2xl shadow-card">
+                    <div
+                      className="overflow-hidden rounded-2xl border-t-4 shadow-card"
+                      style={{ borderTopColor: color }}
+                    >
                       <div className="relative aspect-video w-full">
                         {video.youtubeId ? (
                           <iframe
@@ -316,7 +361,12 @@ export default function JecaKidsPage() {
                   aria-hidden="true"
                 />
                 <div className="relative flex flex-col items-center">
-                  <Baby size={36} className="text-gold" />
+                  <div
+                    className="flex h-16 w-16 items-center justify-center rounded-2xl"
+                    style={{ backgroundColor: `${kidsColors[2]}26` }}
+                  >
+                    <Baby size={32} className="text-gold" />
+                  </div>
                   <span className="eyebrow mt-4">Únete a JECA Kids</span>
                   <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-semibold leading-tight text-white sm:text-5xl">
                     Tu hijo tiene un lugar aquí
