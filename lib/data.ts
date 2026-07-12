@@ -149,13 +149,17 @@ export type Ministry = {
   name: string;
   description: string;
   icon: LucideIcon;
+  image?: string;
+  href?: string;
 };
 
 export const ministries: Ministry[] = [
   {
-    name: "Infantil",
+    name: "JECA Kids",
     description: "Enseñanza bíblica creativa para los más pequeños.",
     icon: Baby,
+    image: "/logo_KIDS_ORIGINAL.png",
+    href: "/jeca-kids",
   },
   {
     name: "Juvenil",
