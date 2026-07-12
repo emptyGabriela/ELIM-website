@@ -86,8 +86,8 @@ const gallery = [
 // Videos del ministerio — reemplazar youtubeId con el ID real de cada video de YouTube
 // (el ID es lo que aparece después de "v=" en la URL del video).
 const videos: { title: string; youtubeId: string | null }[] = [
-  { title: "Un domingo con JECA Kids", youtubeId: null },
-  { title: "Alabanza infantil", youtubeId: null },
+  { title: "Un domingo con JECA Kids", youtubeId: "M0hfW7YPw2I" },
+  { title: "Alabanza infantil", youtubeId: "W7ypdEUs67A" },
 ];
 
 export default function JecaKidsPage() {
