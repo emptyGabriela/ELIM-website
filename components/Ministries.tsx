@@ -25,8 +25,8 @@ export default function Ministries() {
                     <Image
                       src={ministry.image}
                       alt={`Logo de ${ministry.name}`}
-                      width={35}
-                      height={35}
+                      width={50}
+                      height={50}
                       className="h-6 w-6 object-contain"
                     />
                   ) : (
